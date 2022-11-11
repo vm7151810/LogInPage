@@ -45,17 +45,13 @@ const butn = document.querySelector(".submit");
 butn.disabled = true;
 
 finput.addEventListener("keyup", butt);
-var x = 0 ;
 
 function butt() {
-    if (document.querySelector(".input").value === "") {
+    var x = document.querySelector(".input").value ;
+    if (x.length < 13) {
         butn.disabled = true;
-        x = 0;
     }
     else {
-        x = x + 1 ;
-        if (x > 20) {
-            butn.disabled = false;
-        }
+        butn.disabled = false;
     }
 }
