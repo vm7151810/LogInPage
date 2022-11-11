@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pharam</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="bubbles"> 
+            <span style="--i:11"> </span>
+            <span style="--i:12"> </span>
+            <span style="--i:24"> </span>
+            <span style="--i:13"> </span>
+            <span style="--i:23"> </span>
+            <span style="--i:10"> </span>
+            <span style="--i:18"> </span>
+            <span style="--i:16"> </span>
+            <span style="--i:19"> </span>
+            <span style="--i:22"> </span>
+            <span style="--i:25"> </span>
+            <span style="--i:18"> </span>
+            <span style="--i:21"> </span>
+            <span style="--i:26"> </span>
+            <span style="--i:17"> </span>
+            <span style="--i:11"> </span>
+            <span style="--i:12"> </span>
+            <span style="--i:24"> </span>
+            <span style="--i:13"> </span>
+            <span style="--i:23"> </span>
+            <span style="--i:10"> </span>
+            <span style="--i:18"> </span>
+            <span style="--i:16"> </span>
+            <span style="--i:19"> </span>
+            <span style="--i:22"> </span>
+            <span style="--i:25"> </span>
+            <span style="--i:18"> </span>
+            <span style="--i:21"> </span>
+            <span style="--i:26"> </span>
+            <span style="--i:17"> </span>
+            <span style="--i:23"> </span>
+            <span style="--i:22"> </span>
+            <span style="--i:18"> </span>
+            <span style="--i:16"> </span>
+            <span style="--i:24"> </span>
+            <span style="--i:22"> </span>
+            <span style="--i:18"> </span>
+            <span style="--i:18"> </span>
+            <span style="--i:19"> </span>
+            <span style="--i:26"> </span>
+            <span style="--i:25"> </span>
+        </div>
+        <div class="form">
+            <div class="buttons">
+                <div id="btn"></div>
+                <button type="button" class="toggle" onclick="login()">Log-in</button>
+                <button type="button" class="toggle" onclick="register()">Register</button>
+            </div>
+            <form id="log" class="fill">
+                <input type="text" class="input" pattern="(?=.*\d)(?=.*[A-Z]).{13}"placeholder="BITS-ID" required>
+                <input type="password" class="input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Enter Password" required>
+                <button type="submit" id="logi" class="submit" disabled="disabled">Log in</button> 
+                <div id="mod" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p class="tex">YOU'RE LOGGED IN</p>
+                    </div>
+                </div>
+            
+            </form>
+            <form id="reg" class="fill">
+                <input type="text" class="input" placeholder="Full name" required>
+                <input type="text" class="input" pattern="(?=.*\d)(?=.*[A-Z]).{13}" placeholder="BITS-ID" required>
+                <input type="email" class="input" placeholder="Email Id" required>
+                <input type="password" class="input" id="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Enter Password" required>
+                <input type="password" class="input" id="cpass" placeholder="Re-Enter Password" oninput="check(this)" required>
+                <button type="submit" id="regi" class="submit">Register</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

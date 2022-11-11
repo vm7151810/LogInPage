@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0c192c;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.bubbles {
+    position: relative;
+    display: flex;
+    z-index: -2;
+}
+
+.bubbles span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: #4fc3dc;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(120s/var(--i));
+    overflow: hidden;
+}
+
+.bubbles span:nth-child(even) {
+    background: #ff2d75;
+    box-shadow: 0 0 0 10px #ff2d7544 , 0 0 50px #ff2d75, 0 0 100px #ff2d75; 
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(100vh) scale(0) ;
+    }
+    100% {
+        transform: translateY(-10vh) scale(1); 
+    }
+}
+
+.form {
+    width: 450px;
+    height: 500px;
+    position: relative;
+    margin: 6% auto;
+    background-image: linear-gradient(to left, rgb(219, 206, 255), rgb(255, 255, 255), rgb(255, 255, 255), rgb(219, 206, 255));
+    border-radius: 30px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.buttons {
+    width: 220px;
+    margin: 45px auto;
+    position: relative;
+    box-shadow: 0 0 20px 3px rgb(134, 226, 226);
+    border-radius: 20px;
+}
+
+.toggle {
+    padding: 10px 30px;
+    cursor: pointer ;
+    background: transparent;
+    border: 0 ;
+    outline: none;
+    position: relative;
+}
+
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background-image: linear-gradient(to left, #17f8f8, #00bfff);
+    border-radius: 30px;
+    transition: .5s;
+}
+
+.fill {
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.input {
+    width: 100% ;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    outline: none;
+    background: transparent;
+}
+
+.submit {
+    width: 83% ;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    background-image: linear-gradient(to left, #17f8f8, #00bfff);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    box-shadow: 0 0 20px 3px rgb(134, 226, 226);
+    border-radius: 20px;
+}
+
+.submit:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#logi {
+    margin: 50px auto;
+}
+
+#regi {
+    margin: 35px auto;
+}
+
+#log {
+    left: 90px;
+    top: 180px ;
+}
+
+#reg {
+    left: 490px;
+    top: 140px ;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1 ;
+    left: 28.8% ;
+    top: 27%;
+    width: 45%;
+    height: 45% ;
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #433997;
+    margin: 80px 80px ;
+    padding: 20px 20px;
+    border: 2px solid #888;
+    box-shadow: 0 0 20px 9px;
+    border-radius: 30px;
+    width: 70%;
+    height: 40%;
+}
+
+.close {
+    color: rgb(255, 255, 255) ;
+    float: right ;
+    font-size: 28px ;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.tex {
+    margin: 35px 95px;
+    font-size: 25px ;
+    color: white;
+}
