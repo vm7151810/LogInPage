@@ -1,17 +1,17 @@
-var x = document.getElementById("log") ;
-var y = document.getElementById("reg") ;
-var z = document.getElementById("btn") ;
+var log = document.getElementById("log") ;
+var reg = document.getElementById("reg") ;
+var btn = document.getElementById("btn") ;
 
 function register() {
-    x.style.left = "-400px" ;   
-    y.style.left = "90px" ;
-    z.style.left = "110px" ;
+    log.style.left = "-400px" ;   
+    reg.style.left = "90px" ;
+    btn.style.left = "110px" ;
 }
 
 function login() {
-    x.style.left = "90px" ;   
-    y.style.left = "490px" ;
-    z.style.left = "0px" ;
+    log.style.left = "90px" ;   
+    reg.style.left = "490px" ;
+    btn.style.left = "0px" ;
 }
 
 function check(input) {
@@ -32,7 +32,7 @@ btn.onclick = function() {
   
 span.onclick = function() {
     modal.style.display = "none";
-  }
+}
   
 window.onclick = function(event) {
     if (event.target == modal) {
@@ -40,19 +40,22 @@ window.onclick = function(event) {
     }
 }
 
-const formInput = document.querySelector(".input");
-const formInpt = document.querySelector("#pass");
-const formInut = document.querySelector("#cpass");
-const formButton = document.querySelector(".submit");
-formButton.disabled = true;
+const finput = document.querySelector(".input");
+const butn = document.querySelector(".submit");
+butn.disabled = true;
 
-formInput.addEventListener("keyup", buttonState);
+finput.addEventListener("keyup", butt);
+var x = 0 ;
 
-function buttonState() {
+function butt() {
     if (document.querySelector(".input").value === "") {
-        formButton.disabled = true;
+        butn.disabled = true;
+        x = 0;
     }
     else {
-        formButton.disabled = false;
+        x = x + 1 ;
+        if (x > 20) {
+            butn.disabled = false;
+        }
     }
 }
